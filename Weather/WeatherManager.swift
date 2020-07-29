@@ -51,7 +51,6 @@ struct WeatherManager {
         let decoder = JSONDecoder()
         do {
             let weather = try decoder.decode(WeatherData.self, from: recievedWeatherData)
-            fetchIcon(title: weather.weather[0].icon)
             delegate?.didUpdateWeather(weather)
         } catch {
             delegate?.didFailWithError(error)
