@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cityNameTextField: UITextField!
     @IBOutlet weak var weatherDetailsLabel: UILabel!
+    @IBOutlet weak var weatherIcon: UIImageView!
     
     var weatherManager = WeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherManager.delegate = self
+        cityNameTextField.delegate = self
     }
     @IBAction func searchButton(_ sender: Any) {
         if let cityName = cityNameTextField.text {
@@ -65,11 +67,21 @@ class ViewController: UIViewController {
                 
                 """
             }
-            
             self.weatherDetailsLabel.text = info
+            if let url = self.weatherManager.fetchIcon(title: (data?.weather[0].icon)!){
+                self.weatherIcon.load(url: url)
+            }
         }
     }
     
+}
+
+extension ViewController: UISearchTextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchButton(textField)
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension ViewController: WeatherManagerDelegat {

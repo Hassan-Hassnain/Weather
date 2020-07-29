@@ -27,7 +27,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lahore" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3x-VV-tAP">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-ZU-lsg">
                                         <rect key="frame" x="334" y="0.0" width="40" height="40"/>
@@ -48,13 +48,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJW-ps-ePd">
+                                <rect key="frame" x="147" y="197.5" width="120" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9Am-oS-cYX"/>
+                                    <constraint firstAttribute="height" constant="105" id="RYD-qr-xbG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ueh-EB-TdU" secondAttribute="trailing" constant="20" id="07C-6L-NE9"/>
                             <constraint firstItem="Ueh-EB-TdU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C0j-Zo-ccA"/>
+                            <constraint firstItem="cJW-ps-ePd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H9H-LZ-hLW"/>
                             <constraint firstItem="Ueh-EB-TdU" firstAttribute="top" secondItem="Dqv-3o-uMR" secondAttribute="bottom" constant="8.5" id="Qf0-DG-zg2"/>
                             <constraint firstItem="Dqv-3o-uMR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TRN-WB-x1z"/>
+                            <constraint firstItem="cJW-ps-ePd" firstAttribute="top" secondItem="oHg-fl-Xh6" secondAttribute="bottom" constant="20" id="TST-u6-Tqf"/>
                             <constraint firstItem="oHg-fl-Xh6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Za2-UN-voo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oHg-fl-Xh6" secondAttribute="trailing" constant="20" id="ZcB-oR-46m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dqv-3o-uMR" secondAttribute="trailing" constant="20" id="be4-UD-qzd"/>
@@ -66,6 +75,7 @@
                     <connections>
                         <outlet property="cityNameTextField" destination="d3x-VV-tAP" id="U8H-fa-8Oe"/>
                         <outlet property="weatherDetailsLabel" destination="oHg-fl-Xh6" id="BhG-Je-dNR"/>
+                        <outlet property="weatherIcon" destination="cJW-ps-ePd" id="DHD-Px-LJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol WeatherManagerDelegat {
     func didUpdateWeather(_ newData: WeatherData)
@@ -38,7 +39,7 @@ struct WeatherManager {
                         if let safeData = data {
 //                            let dataString = String(data: safeData, encoding: .utf8)
 //                            print(dataString)
-                            self.parseJSON(weatherData: safeData)
+                            self.parseJSON(recievedWeatherData: safeData)
                             
                         }
                     }
@@ -46,15 +47,23 @@ struct WeatherManager {
                 }
             }
     
-    func parseJSON(weatherData: Data) {
+    func parseJSON(recievedWeatherData: Data) {
         let decoder = JSONDecoder()
         do {
-            let weather = try decoder.decode(WeatherData.self, from: weatherData)
-//            print(weather)
+            let weather = try decoder.decode(WeatherData.self, from: recievedWeatherData)
+            fetchIcon(title: weather.weather[0].icon)
             delegate?.didUpdateWeather(weather)
         } catch {
             delegate?.didFailWithError(error)
         }
     }
     
+    func fetchIcon(title: String) -> URL? {
+        let urlStringStart = "https://openweathermap.org/img/wn/"
+        let urlStringEnd = "@2x.png"
+        let urlString = urlStringStart+title+urlStringEnd
+        return URL(string: urlString)
+    }
+    
 }
+
