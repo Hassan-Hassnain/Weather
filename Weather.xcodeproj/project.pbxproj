@@ -16,6 +16,7 @@
 		842E687A24D08523006AE20D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E687824D08523006AE20D /* LaunchScreen.storyboard */; };
 		842E688224D08538006AE20D /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E688124D08538006AE20D /* WeatherManager.swift */; };
 		842E688424D09A8A006AE20D /* WeaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E688324D09A8A006AE20D /* WeaterData.swift */; };
+		84EC2E5E24D9BF5A00432D04 /* Weather.sb-ecacdb29-jXyrAe in Resources */ = {isa = PBXBuildFile; fileRef = 84EC2E5D24D9BF5A00432D04 /* Weather.sb-ecacdb29-jXyrAe */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		842E687B24D08523006AE20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842E688124D08538006AE20D /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		842E688324D09A8A006AE20D /* WeaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterData.swift; sourceTree = "<group>"; };
+		84EC2E5D24D9BF5A00432D04 /* Weather.sb-ecacdb29-jXyrAe */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Weather.sb-ecacdb29-jXyrAe"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,25 @@
 				842E688124D08538006AE20D /* WeatherManager.swift */,
 				842E688324D09A8A006AE20D /* WeaterData.swift */,
 				84273D1024D189D30097F3DC /* Extensions.swift */,
+				84EC2E5B24D9BEFB00432D04 /* Images */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		84EC2E5B24D9BEFB00432D04 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84EC2E5C24D9BF5A00432D04 /* screen Shots */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		84EC2E5C24D9BF5A00432D04 /* screen Shots */ = {
+			isa = PBXGroup;
+			children = (
+				84EC2E5D24D9BF5A00432D04 /* Weather.sb-ecacdb29-jXyrAe */,
+			);
+			path = "screen Shots";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842E687A24D08523006AE20D /* LaunchScreen.storyboard in Resources */,
+				84EC2E5E24D9BF5A00432D04 /* Weather.sb-ecacdb29-jXyrAe in Resources */,
 				842E687724D08523006AE20D /* Assets.xcassets in Resources */,
 				842E687524D08521006AE20D /* Main.storyboard in Resources */,
 			);
